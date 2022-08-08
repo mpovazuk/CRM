@@ -21,7 +21,7 @@ namespace CrmUi
 
         private void label1_Click(object sender, EventArgs e)
         {
-            Console.WriteLine();
+          
         }
 
         private void CustomerForm_Load(object sender, EventArgs e)
