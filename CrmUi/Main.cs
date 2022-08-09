@@ -43,16 +43,29 @@ namespace CrmUi
             catalogCheck.Show();
         }
 
-        private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void CustomerAddToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CustomerForm form = new CustomerForm();
             if (form.ShowDialog() == DialogResult.OK)
                 db.Customers.Add(form.customer);
+            db.SaveChanges();
+        }
+
+        private void sellerAddToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SellerForm sellerForm = new SellerForm();
+            if (sellerForm.ShowDialog() == DialogResult.OK)
+                db.Sellers.Add(sellerForm.seller);
+            db.SaveChanges();
+        }
+
+        private void ProductAddToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductForm productForm = new ProductForm();
+            if(productForm.ShowDialog() == DialogResult.OK)
+                db.Products.Add(productForm.product);
             db.SaveChanges();
         }
     }

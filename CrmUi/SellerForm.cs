@@ -11,17 +11,17 @@ using CrmBL.Model;
 
 namespace CrmUi
 {
-    public partial class CustomerForm : Form
+    public partial class SellerForm : Form
     {
-        public Customer customer { get; set; }
-        public CustomerForm()
+        public Seller seller { get; set; }
+        public SellerForm()
         {
             InitializeComponent();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-           
+          
         }
 
         private void CustomerForm_Load(object sender, EventArgs e)
@@ -31,7 +31,7 @@ namespace CrmUi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            customer = new Customer()
+            seller = new Seller()
             {
                 Name = textBox1.Text
         };
